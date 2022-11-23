@@ -40,7 +40,7 @@ st.header('Welcome to student validation')
 
 uploaded_file = st.file_uploader("Upload Picture to be validated", type=[".png",".jpg"], accept_multiple_files=False)
 if uploaded_file is not None:
-  string = model.convert_to_string("Images{}".format(uploaded_file.name)
+  string = model.convert_to_string("Images{}".format(uploaded_file.name))
   student_id = extract_id(string)
   if student_id.isalnum():
     students = pd.read_csv('students.csv')
