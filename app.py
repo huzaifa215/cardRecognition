@@ -40,7 +40,7 @@ st.header('Welcome to student validation')
 
 uploaded_file = st.file_uploader("Upload Picture to be validated", type=[".png",".jpg"], accept_multiple_files=False)
 if uploaded_file is not None:
-  image_address = "Images{}".format(" \ ".strip() + uploaded_file.name.strip())
+  image_address = "Images/{}".format(uploaded_file.name.strip())
   #image_address = "Images\ ".strip() + uploaded_file.name
   #image_address = "Images\{}".format(uploaded_file.name)
   string = model.convert_to_string(image_address)
